@@ -10,12 +10,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/YOUR-USERNAME/YOUR-REPO.git'  // Replace with your repo
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'  // Installs required dependencies
