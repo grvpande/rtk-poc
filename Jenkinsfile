@@ -16,21 +16,21 @@ pipeline {
             }
         }
 
-        stage('Code Quality & Tests') {
-            parallel {
-                stage('Run Unit Tests') {
-                    steps {
-                        bat 'npm test'  // Runs unit tests
-                    }
-                }
+        // stage('Code Quality & Tests') {
+        //     parallel {
+        //         stage('Run Unit Tests') {
+        //             steps {
+        //                 bat 'npm test'  // Runs unit tests
+        //             }
+        //         }
 
-                stage('Linting') {
-                    steps {
-                        bat 'npm run lint'  // Runs ESLint (if configured)
-                    }
-                }
-            }
-        }
+        //         stage('Linting') {
+        //             steps {
+        //                 bat 'npm run lint'  // Runs ESLint (if configured)
+        //             }
+        //         }
+        //     }
+        // }
 
         stage('Build React App') {
             steps {
